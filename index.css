@@ -1,0 +1,78 @@
+html body{
+        height: 100%;
+        background-image: url("https://i.pinimg.com/originals/0b/74/70/0b747017cedf7891bdf304f1419d91bc.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+       
+    }
+
+    .card{
+        height: 370px;
+        background: linear-gradient(to top, rgba(56, 53, 53, 0.5) -3%, hsla(0, 0%, 100%, 0.425) 107%);
+        border-top-left-radius: 30px 30px;
+        border-top-right-radius: 30px 30px;
+        border-width:10px;  
+        border-style:outset;
+    }
+    .form-control{
+        border-width:5px;  
+        border-style:groove;
+    }
+    #status{
+        color: red;
+    }
+    button{
+        border-width:2px;  
+        border-style:ridge;
+    }
+    h4{
+       color: black; 
+       font-size: 35px;
+       text-align: center;
+       margin-left: 40%;
+       margin-right: 46%;
+       background-color: #5351516b;
+       border-style: outset;
+    }
+    h2{
+        font-family: cursive;
+        text-align: center;
+        padding-top: 20px;
+        color: black; 
+        font-size: 35px;
+        text-align: center;
+        background-color: #423e3e2c;
+        border-style: ridge;
+        margin-left: 20%;
+        margin-right: 26%;
+    }
+    .table{ 
+        overflow-y: auto; 
+        height: 300px;
+        background-color: #5351516b;
+     }
+    .table thead th { 
+        position: sticky;
+        top: 0; }
+
+/* Just common table stuff. Really. */
+    table  {
+         border-collapse: collapse;
+         width: 100%; }
+    td , tr { 
+        padding: 8px 16px;
+        border: 1px solid black;
+        color: white;
+    }
+    th     { 
+        background:#eee;
+        border: 1px solid black;
+        color: black;
+        font-size: 20px;
+        text-align: center;
+    }
+    #sta{
+        margin-left: 10%;
+        font-family: cursive;
+        font-size: 25px;
+    }

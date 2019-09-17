@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mqtt</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+
+<body>
+    <h2><b>Mqtt On Web Browser</b></h2>
+    <div class="container">
+        <br>
+        <div class="row">
+            <!-- column 1 -->
+            <div class="col">
+                <div class="card">
+                    <div class="container">
+                        <center>
+                            <div class="card-header">
+                                <div class="text-center h4">Broker</div>
+
+                            </div>
+                            <div class="card-body">
+                                <label for="input-broker-ws"> Address:</label>
+
+                                <input type="text" class="form-control" id="input-broker-ws" value="wss://test.mosquitto.org:8081/mqtt"><br>
+
+                                <button id="btn-connect" class="btn btn-outline-success">Connect</button>
+
+                                <button class="btn btn-outline-danger pure-button btn-disconnect">Disconnect</button>
+                            </div>
+                        </center>
+                        <label for="status" id ="sta">Status:</label>
+
+                        <center>
+                            <p id="status"><b><i>Disconnected</i></b></p>
+                        </center>
+
+                    </div>
+                </div>
+            </div>
+            <!-- column 2 -->
+            <div class="col">
+                <div class="card">
+                    <div class="container">
+                        <center>
+                            <div class="card-header">
+                                <div class="text-center h4">Publisher</div>
+                            </div>
+                        </center>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label class="text-left">Topic:</label>
+                                <input type="text" class="form-control" id="topic">
+                            </div>
+                            <div class="form-group">
+                                <label class="text-justify">Message:</label>
+                                <input type="text" class="form-control" id="message">
+                            </div>
+                            <center>
+                                <button id="btn-pub" class="btn btn-outline-success">Publish</button></center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- column 3 -->
+            <div class="col">
+                <div class="card">
+                    <div class="container">
+                        <center>
+                            <div class="card-header">
+                                <div class="text-center h4">Subscriber</div>
+                            </div>
+                        </center>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label class="text-left">Topic:</label>
+                                <input type="text" class="form-control" id="topic-sub">
+                            </div>
+
+                            <center>
+                                <button id="btn-sub" class="btn btn-outline-success">Subscribe</button>
+                                <button id="btn-unsub" class="btn btn-outline-success">Unsubscribe</button>
+                            </center>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- row1 -->
+        <br>
+        <h4>Message</h4>
+        <!-- <div class="row">
+            <table class="text-center table table-bordered">
+                <thead class="table">
+                    <tr>
+                        <th>Topic</th>
+                        <th>Payload</th>
+                        <th>Timestamp</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div> -->
+
+        <div class="table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Topic</th>
+                        <th>Payload</th>
+                        <th>Timestamp</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+
+        <!-- <div class="tableFixHead">
+            <table>
+                <thead>
+                    <tr>
+                        <th>TH 1</th>
+                        <th>TH 2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>A1</td>
+                        <td>A2</td>
+                    </tr>
+                    <tr>
+                        <td>B1</td>
+                        <td>B2</td>
+                    </tr>
+                    <tr>
+                        <td>C1</td>
+                        <td>C2</td>
+                    </tr>
+                    <tr>
+                        <td>D1</td>
+                        <td>D2</td>
+                    </tr>
+                    <tr>
+                        <td>E1</td>
+                        <td>E2</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div> -->
+
+        <!-- script -->
+        <script src="scripts/browserMqtt.js"></script>
+        <script src="scripts/controller.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"></script>
+
+
+</body>
+
+</html>
